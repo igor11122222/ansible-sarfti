@@ -1,6 +1,2 @@
 hello
 Hallo
-<<<<<<< HEAD
-=======
-this is a test
->>>>>>> 14ea2b331c12e06c088f2f7512be3ef2ff28f97d
