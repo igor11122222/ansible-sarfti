@@ -1,0 +1,16 @@
+---
+- name: Play of local connection
+  hosts: cluster_wn
+#  hosts: localhost
+#  connection: local
+#  become: yes
+  tasks:
+    - name: Local PingPong
+      ping:
+#    - name: Just force systemd to reread configs
+#      systemd:
+#        daemon_reload: true
+#    - name: Update APT Cache and install few packages
+#      apt:
+#        update_cache: true
+#        name: htop
