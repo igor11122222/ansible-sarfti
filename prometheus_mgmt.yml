@@ -1,13 +1,4 @@
 ---
-- name: Prometheus node exporter deploy
-  hosts: localhost
-  connection: local
-  gather_facts: no
-
-
-
-
-
 - name: PLAY - Actions on Ubuntu desktop
 #  hosts: mgmt
   hosts: localhost
