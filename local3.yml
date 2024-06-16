@@ -1,8 +1,7 @@
 ---
 - name: Prometheus node exporter deploy
-  hosts: wn11
-#  hosts: [cluster_wn]
-#  hosts: 10.0.0.46
+  hosts: localhost
+  connection: local
   gather_facts: no
 
 
