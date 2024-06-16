@@ -28,12 +28,14 @@
       dest: /usr/bin/prometheus-node-exporter
       mode: '755'
       remote_src: true
+      backup: true
 
   - name: Copy prometheus node exporter service file to
     get_url:
       url: http://10.0.0.104/distr/prometheus-node-exporter-service/prometheus-node-exporter.service
       dest: /usr/lib/systemd/system/
       mode: '644'
+      backup: true
 
   - name: Just force systemd to reread configs
     systemd:
