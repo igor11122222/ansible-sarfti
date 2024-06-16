@@ -1,8 +1,8 @@
 ---
 - name: Prometheus node exporter deploy
 #  hosts: wn11
-  hosts: [cluster_wn]
-#  hosts: vobox
+#  hosts: [cluster_wn]
+  hosts: vobox
   gather_facts: no
 
 
