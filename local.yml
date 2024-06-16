@@ -1,6 +1,6 @@
 ---
 - name: Play of local connection
-  hosts: 127.0.0.1
+  hosts: localhost
 #  connection: local
 #  become: yes
   tasks:
