@@ -6,48 +6,6 @@
 
 
 
-  tasks:
-
-  - name: Ping Pong
-    ping:
-
-  - name: Add system user prometheus
-    user:
-      name: prometheus
-      shell: /usr/sbin/nologin
-      system: true
-      create_home: false
-      comment: Prometheus system user
-
-  - name: Download and Unarchive prometheus-node-exporter-1.8
-    unarchive:
-      src: https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
-      dest: /tmp/
-      remote_src: true
-
-  - name: Copy node-exporter binary file to /usr/bin/ named "prometheus-node-exporter"
-    copy:
-      src: /tmp/node_exporter-1.8.0.linux-amd64/node_exporter
-      dest: /usr/bin/prometheus-node-exporter
-      mode: '755'
-      remote_src: true
-
-  - name: Copy prometheus node exporter service file to
-    get_url:
-      url: http://10.0.0.104/distr/prometheus-node-exporter-service/prometheus-node-exporter.service
-      dest: /usr/lib/systemd/system/
-      mode: '644'
-
-  - name: Just force systemd to reread configs
-    systemd:
-      daemon_reload: true
-
-  - name: Start prometheus node exporter service and Make service start on boot
-    systemd:
-      name: prometheus-node-exporter.service
-      state: started
-      enabled: true
-
 
 
 - name: PLAY - Actions on Ubuntu desktop
