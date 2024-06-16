@@ -2,7 +2,7 @@
 - name: Prometheus node exporter deploy
 #  hosts: wn11
 #  hosts: [cluster_wn]
-  hosts: vobox
+  hosts: 10.0.0.46
   gather_facts: no
 
 
