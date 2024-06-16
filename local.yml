@@ -1,7 +1,7 @@
 ---
 - name: Play of local connection
   hosts: localhost
-#  connection: local
+  connection: local
 #  become: yes
   tasks:
     - name: Local PingPong
