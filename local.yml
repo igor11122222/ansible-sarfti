@@ -9,10 +9,10 @@
 
 
     - name: install the latest version of the needed package
-       yum:
-         name: screen
-         state: latest
-         update_cache: yes
+      yum:
+        name: screen
+        state: latest
+        update_cache: yes
 #    - name: Just force systemd to reread configs
 #      systemd:
 #        daemon_reload: true
