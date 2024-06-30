@@ -1,13 +1,16 @@
 ---
-- name: Play 
+- name: Play of local connection
   hosts: localhost
 #  connection: local
 #  become: yes
   tasks:
+    - name: Local PingPong
+      ping:
 
-    - name: Updating all the packages
+
+    - name: install the latest version of the needed package
       yum:
-        name: '*'
+        name: screen
         state: latest
         update_cache: yes
 #    - name: Just force systemd to reread configs
