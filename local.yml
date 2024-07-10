@@ -1,5 +1,5 @@
 ---
-- name: Play 1
+- name: Play 
   hosts: localhost
 #  connection: local
 #  become: yes
