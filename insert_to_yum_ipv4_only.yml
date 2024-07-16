@@ -1,0 +1,13 @@
+---
+- name: Yum makecache Yum update cvmfs
+  hosts: cluster_wn
+  become: yes
+  gather_facts: false
+  tasks:
+
+  - name: Insert IPV4 only
+    ansible.builtin.lineinfile:
+      path: /etc/yum.conf
+      line: ip_resolve = 4
+      backup: true
+
